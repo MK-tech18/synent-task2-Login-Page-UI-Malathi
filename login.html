@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>Welcome back</h1>
+        <p class="sub">Login only works for registered users.</p>
+
+        <form id="loginForm" class="form" autocomplete="on" novalidate>
+          <label class="field">
+            <span>Email</span>
+            <input id="loginEmail" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <input id="loginPassword" type="password" placeholder="Enter your password" required />
+          </label>
+
+          <div class="row">
+            <a class="link" href="#" onclick="Auth.forgotPasswordAlert(); return false;">Forgot Password?</a>
+          </div>
+
+          <p id="loginMsg" class="msg" role="status" aria-live="polite"></p>
+
+          <button class="btn primary" type="submit">Login</button>
+
+          <p class="hint">
+            New user?
+            <a href="register.html">Create account</a>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="auth.js"></script>
+    <script>
+      Auth.loginPage();
+    </script>
+  </body>
+</html>
+
