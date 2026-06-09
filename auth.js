@@ -114,7 +114,7 @@ const Auth = (() => {
 
       const res = await register(email, pass, conf);
       setMsg(msg, res.message, res.ok ? "ok" : "err");
-      if (res.ok) setTimeout(() => (window.location.href = "login.html"), 900);
+      if (res.ok) setTimeout(() => (window.location.href = "index.html"), 900);
     });
   }
 
