@@ -89,7 +89,7 @@ const Auth = (() => {
 
   function guard() {
     const s = getSession();
-    if (!s?.email) window.location.href = "login.html";
+    if (!s?.email) window.location.href = "index.html";
   }
 
   function currentUserEmail() {
@@ -98,7 +98,7 @@ const Auth = (() => {
 
   function logout() {
     clearSession();
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 
   function registerPage() {
